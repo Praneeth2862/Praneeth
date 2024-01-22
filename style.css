@@ -1,0 +1,308 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+section{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header{
+    display: flex;
+    align-items: center; /* Vertically align items */
+    top:0;
+    height:10vh;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: white; /* Add a background color for visibility */
+    padding: 15px 10%;
+    z-index: 100; /* Ensure the header is above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+header h1{
+    font-size:2.5em;
+    font-weight: bolder;
+}
+header h1 span{
+    color:rgb(86, 45, 175);
+}
+header ul{
+    display:flex;
+    justify-content: space-between;
+}
+header ul li{
+    list-style: none;
+    margin-right:20px;
+    padding:7px 5px;
+}
+header ul li a{
+    text-decoration: none;
+    font-size: 1.4em;
+    color:black;
+    font-weight: 600;
+    position: relative;
+}
+header ul li a::after{
+    content: '';
+    height:3px;
+    width:0;
+    background: rgb(86, 45, 175);
+    position:absolute;
+    bottom:-6px;
+    left:0;
+    transition: 0.2s ease-in-out;
+}
+header ul li a:hover::after {
+    width:100%;
+}
+header ul li a.active::after{
+    width:100%;
+}
+.menu{
+    display:none;
+    position:absolute;
+    font-size: 1.5em;
+    right:10px;
+    cursor: pointer;
+    
+}
+/*********************Home*****************************/
+#home{
+    background: linear-gradient(37deg,rgba(86, 45, 175,0.7) , white 50%);
+    margin-top:10vh;
+    height:100vh;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:20px 10%;
+    z-index:2;
+}
+.hello-box{
+    position:relative;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width:700px;
+    height:500px;
+}
+.hello-box p{
+    font-size:3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.hello-box p span{
+    color: rgb(86, 45, 175);
+}
+.typewriter h1 {
+    font-size: 2.5em;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+.image{
+    width:400x;
+    height:500px;
+}
+.image img{
+    width:400px;
+    height:500px;
+    border-radius: 50%;
+}
+.about-links{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-links a{
+    margin-right: 10px;
+    text-decoration: none;
+    padding:8px 10px;
+    font-size: 1.2em;
+    color:rgb(86, 45, 175);
+    font-weight: 600;
+    border:1px rgb(86, 45, 175) solid;
+    transition: 0.3s ease-in-out;
+}
+.about-links a:hover{
+    background:rgb(86, 45, 175);
+    color:white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.social-media{
+    width:170px;
+    margin-top:30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-media a i{
+    font-size: 2.5em;
+    border-radius:50%;
+    color: rgb(86, 45, 175);
+    transition: 0.2s ease-in;
+}
+.social-media a i:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.social-media a i.fa-linkedin:hover{
+    color:#0A66C2;
+}
+.social-media a i.fa-github:hover{
+    color:black;
+}
+.social-media a i.fa-hackerrank:hover{
+    color:#0ac257;
+}
+
+/**********************About Section********************/
+#about{
+    /* background: linear-gradient(37deg,rgb(86, 45, 175) , white,rgb(86, 45, 175)); */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width: 100%;
+}
+#about p{
+    background-color: white;
+    width:40vw;
+    height:50vh;
+    font-size: 1.5em;
+    word-spacing: 10px;
+    font-weight: 500;
+    font-family:'Ubuntu',sans-serif;
+    border:1px solid ;
+    border-radius:15px ;
+    padding: 20px 20px;
+    box-shadow: rgba(245, 150, 242, 0.35) 0px 5px 15px;
+}
+#about p span{
+    color:rgb(86, 45, 175);
+    font-weight: bold;
+    font-family: lucida;
+}
+/*************************Skills******************************/
+#skills{
+    background: linear-gradient(37deg,rgb(86, 45, 175) , white,rgb(86, 45, 175));;
+    height:100vh;
+    width:100%;
+}
+.skills-grid{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap:80px;
+    flex-wrap: wrap ;
+}
+.grid-box{
+    width:250px;
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+.grid-title{
+    width:100%;
+    text-align: center;
+    font-size:2em ;
+    font-weight: bolder;
+    height:50px;
+    padding-top: 10px;
+}
+.grid-list{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.grid-list>ul{
+    list-style: square;
+}
+.grid-list>ul>li{
+    padding:5px;
+}
+
+
+
+@media screen and (max-width:768px) {
+    header ul{
+        display:none;
+    }
+    .menu{
+        display: block;
+    }
+    .hello-box{
+        width:50%;
+        font-size:10px;
+    }
+    .image{
+        display:grid;
+        place-items: center;
+    }
+    .image img{
+        width:150px;
+        height:200px;
+    }
+    .about-links{
+        flex-direction: column;
+        gap:2px;
+    }
+    .social-media{
+        width:100px;
+    }
+    
+    
+}
+
+
+
+/**#skills img{
+    width:125px;
+    height:125px;
+    border-radius: 50%;
+}
+.skillset{
+    margin-top:15px;;
+}
+.web-developement-logos{
+    width:100%;
+    gap: 10px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+**/
+
